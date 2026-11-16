@@ -1,0 +1,24 @@
+[project]
+name = "contract-report"
+version = "1.0.0"
+description = "Отчёт по авансам: сколько выплачено по каждой работе и договору, на дату"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "Proprietary" }
+dependencies = []
+
+[project.scripts]
+contract-report = "contract_report.cli:main"
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["contract_report"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
